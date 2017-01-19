@@ -1,0 +1,48 @@
+{
+  "goods": {
+    "rope": [
+      {
+        "img": "images/product.png",
+        "text": "text"
+      },
+      {
+        "img": "images/product2.jpg",
+        "text": "text"
+      },
+      {
+        "img": "images/product2.jpg",
+        "text": "text"
+      }
+    ],
+    "chain": [
+      {
+        "img": "images/product3.jpg",
+        "text": "text"
+      },
+      {
+        "img": "images/product4.jpg",
+        "text": "text"
+      }
+    ],
+    "comb": [
+      {
+        "img": "images/product5.jpg",
+        "text": "text"
+      },
+      {
+        "img": "images/product6.jpg",
+        "text": "text"
+      }
+    ],
+    "textile": [
+      {
+        "img": "images/product7.jpg",
+        "text": "info"
+      },
+      {
+        "img": "images/product.png",
+        "text": "text"
+      }
+    ]
+  }
+}
