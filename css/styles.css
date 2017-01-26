@@ -556,7 +556,9 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 	margin: 38px -15px 0;
 	height: 400px;
 }
-
+.video .media-mob{
+	display: none;
+}
 .video img {
 	width: 100%;
 	height: 100%;
@@ -833,40 +835,40 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 	color: #facf1e;
 }
 
-/*.reviews {*/
-/*padding: 90px 0;*/
-/*background: url(../images/fon5.jpg) 50% 0 no-repeat fixed;*/
-/*background-size: cover;*/
-/*}*/
+.reviews {
+padding: 90px 0;
+background: url(../images/fon5.jpg) 50% 0 no-repeat fixed;
+background-size: cover;
+}
 
-/*.reviews .items {*/
-/*text-align: center;*/
-/*margin-left: -24px;*/
-/*padding-top: 46px;*/
-/*}*/
+.reviews .items {
+text-align: center;
+margin-left: -24px;
+padding-top: 46px;
+}
 
-/*.reviews .item {*/
-/*width: 360px;*/
-/*display: inline-block;*/
-/*vertical-align: top;*/
-/*margin: 30px 0 0 24px;*/
-/*cursor: pointer;*/
-/*}*/
+.reviews .item {
+width: 360px;
+display: inline-block;
+vertical-align: top;
+margin: 30px 0 0 50px;
+cursor: pointer;
+}
 
-/*.reviews .item .foto {*/
-/*width: 165px;*/
-/*height: 165px;*/
-/*border: 10px solid #fe9b19;*/
-/*border-radius: 50%;*/
-/*margin: 0 auto;*/
-/*}*/
+.reviews .item .foto {
+width: 165px;
+height: 165px;
+border: 10px solid #fe9b19;
+border-radius: 50%;
+margin: 0 auto;
+}
 
-/*.reviews .item .foto img {*/
-/*width: 100%;*/
-/*height: 100%;*/
-/*display: block;*/
-/*border-radius: 50%;*/
-/*}*/
+.reviews .item .foto img {
+width: 100%;
+height: 100%;
+display: block;
+border-radius: 50%;
+}
 
 .reviews .item .name {
 	font: 24px 'Lato';
@@ -882,103 +884,101 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 	margin-top: 6px;
 }
 
-/*.reviews .item .text {*/
-/*font: 18px 'Lato';*/
-/*color: #242422;*/
-/*text-align: left;*/
-/*margin-top: 18px;*/
+.reviews .item .text {
+font: 18px 'Lato';
+color: #242422;
+text-align: left;
+margin-top: 18px;
+}
+/*.reviews {*/
+	/*padding: 90px 0;*/
+	/*background: url(../images/fon5.jpg) 50% 0 no-repeat fixed;*/
+	/*background-size: cover;*/
 /*}*/
-.reviews {
-	padding: 90px 0;
-	background: url(../images/fon5.jpg) 50% 0 no-repeat fixed;
-	background-size: cover;
-}
 
-.reviews .items {
-	margin-left: -24px;
-	padding-top: 30px;
-	text-align: center;
-}
+/*.reviews .items {*/
+	/*margin-left: -24px;*/
+	/*padding-top: 30px;*/
+	/*text-align: center;*/
+/*}*/
 
-.reviews .items .aside {
-	min-height: 50px;
-}
+/*.reviews .items .aside {*/
+	/*min-height: 50px;*/
+/*}*/
 
-.reviews .item {
-	display: inline-block;
-	vertical-align: top;
-	margin: 30px 0 0 24px;
-	width: 263px;
+/*.reviews .item {*/
+	/*display: inline-block;*/
+	/*vertical-align: top;*/
+	/*margin: 30px 0 0 24px;*/
+	/*width: 263px;*/
 
-}
+/*}*/
 
-.reviews .item .thumb {
-	width: 100%;
-	height: 100%;
-	display: block;
-	position: relative;
-	text-decoration: none;
-	overflow: hidden;
-}
+/*.reviews .item .thumb {*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*display: block;*/
+	/*position: relative;*/
+	/*text-decoration: none;*/
+	/*overflow: hidden;*/
+/*}*/
 
-.reviews .item .thumb:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(48, 48, 48, .70);
-	opacity: 0;
-	transition: opacity .3s linear;
-	z-index: 1;
-}
+/*.reviews .item .thumb:after {*/
+	/*content: "";*/
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*top: 0;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*background: rgba(48, 48, 48, .70);*/
+	/*opacity: 0;*/
+	/*transition: opacity .3s linear;*/
+	/*z-index: 1;*/
+/*}*/
 
-.reviews .item .thumb:hover:after {
-	opacity: 1;
-}
+/*.reviews .item .thumb:hover:after {*/
+	/*opacity: 1;*/
+/*}*/
 
-.reviews .item .thumb:before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -34px;
-	margin: -17px 0 0 -17.5px;
-	width: 34px;
-	height: 35px;
-	background: url(../images/lupa.png) 0 0 no-repeat;
-	opacity: 0;
-	transition: opacity .3s linear, top .3s linear;
-	z-index: 2;
-}
+/*.reviews .item .thumb:before {*/
+	/*content: "";*/
+	/*position: absolute;*/
+	/*left: 50%;*/
+	/*top: -34px;*/
+	/*margin: -17px 0 0 -17.5px;*/
+	/*width: 34px;*/
+	/*height: 35px;*/
+	/*background: url(../images/lupa.png) 0 0 no-repeat;*/
+	/*opacity: 0;*/
+	/*transition: opacity .3s linear, top .3s linear;*/
+	/*z-index: 2;*/
+/*}*/
 
-.reviews .item .thumb:hover:before {
-	top: 50%;
-	opacity: 1;
-}
+/*.reviews .item .thumb:hover:before {*/
+	/*top: 50%;*/
+	/*opacity: 1;*/
+/*}*/
 
-.reviews .item .thumb img {
-	width: 100%;
-	height: 359px;
-	display: block;
-	border: 10px solid #fe9b19;
-}
+/*.reviews .item .thumb img {*/
+	/*width: 100%;*/
+	/*height: 359px;*/
+	/*display: block;*/
+	/*border: 10px solid #fe9b19;*/
+/*}*/
 
-.reviews .items_just {
-	text-align: justify;
-	margin: 0 0 -18px 0;
-	padding: 30px 48px 0;
-}
+/*.reviews .items_just {*/
+	/*text-align: center;*/
+	/*margin: 0 0 -18px 0;*/
+	/*padding: 30px 48px 0;*/
+/*}*/
 
-.reviews .items_just:after {
-	content: "";
-	width: 100%;
-	display: inline-block;
-}
+/*.reviews .items_just:after {*/
+	/*content: "";*/
+	/*width: 100%;*/
+	/*display: inline-block;*/
+/*}*/
 
-.reviews .items_just .item {
-	margin-left: 0;
-}
+
 
 .reviews .text {
 	font: 700 24px 'Lato';
@@ -1040,6 +1040,7 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 .section_contacts .contact a {
 	text-decoration: none;
 	color: #222220;
+	display: inline-block;
 }
 
 .section_contacts .map {
@@ -1075,15 +1076,19 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 	width: 708px;
 }
 .goods-modal .form {
-	float: left;
+	float: right;
 	width: 50%;
 
 }
 .goods-modal .information{
 	float: left;
 	width: 45%;
-	margin-left: 26px;
 	margin-top: 24px;
+
+}
+.goods-modal .modal-text1{
+	margin-bottom: 10px;
+
 }
 
 .goods-modal ::-webkit-input-placeholder {
@@ -1159,16 +1164,24 @@ header .menu ul li a:hover, footer .menu ul li a:hover {
 
 .catalog .mix .thumb, .catalog .items .item .thumb {
 	width: 100%;
-	height: 307px;
 	line-height: 287px;
 	text-align: center;
 	border: 10px solid #dfdfd8;
 }
+.catalog .statisc-items .title:after{
 
+		content: "";
+		display: none
+		/* style */
+}
+.catalog .mix .thumb .title-goods{
+	font: 900 17px 'Lato';
+	padding: 16px;
+}
 .catalog .mix .thumb img, .catalog .items .item .thumb img {
 	vertical-align: middle;
 	max-width: 100%;
-	max-height: 100%;
+	max-height: 300px;
 	position: relative;
 	top: 2px;
 }
@@ -1289,7 +1302,10 @@ footer .copy {
 .modal .form {
 	margin-top: 24px;
 }
-
+.modal .form .text-fr{
+	margin-bottom: 10px;
+	text-align: left;
+}
 .modal .form .line_form {
 	margin-bottom: 15px;
 }
@@ -1433,6 +1449,14 @@ footer .copy {
 		position: relative;
 		top: 0;
 		transform: none;
+	}
+}
+@media (max-width: 650px) {
+	.video .media-dec{
+		display: none;
+	}
+	.video .media-mob{
+		display: block;
 	}
 }
 
@@ -1816,6 +1840,7 @@ footer .copy {
 .goods-modal .img-item {
 	width: 100%;
 	margin-bottom: 20px;
+
 }
 
 .goods-modal .img-item img {
@@ -1838,7 +1863,7 @@ footer .copy {
 	.goods-modal .information{
 		display: none;
 	}
-	
+
 	#modal_more{
 		width: auto;
 	}

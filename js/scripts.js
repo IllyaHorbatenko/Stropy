@@ -87,13 +87,16 @@ $(window).resize(function () {
 });
 
 function AjaxFilter() {
-    var link = "../ajax/goods.json";
+    //http://work.melfori.com/Stropy/ajax/goods.json
+    var link = "http://work.melfori.com/Stropy/ajax/goods.json";
     // шаблон элемента товаров
-    var elemTpl = function (src) {
-        return "<div class='mix cable goods-item'><div class='thumb'><img src=" + src + "></div> <div class='more'><a class='modal_link' id='modal-goods' href='#modal_more'>Подробнее</a></div></div>"
+    var elemTpl = function (src, title) {
+        return "<div class='mix cable goods-item'><div class='thumb'><img src=" + src + "><h3 class='title-goods'>" + title + "</h3></div> <div class='more'><a class='modal_link' id='modal-goods' href='#modal_more'>Подробнее</a></div></div>"
     };
 
-
+    var staticElem = function (src, title) {
+        return "<div class='mix cable'><div class='thumb'><img src=" + src + "><h3 class='title-goods'>" + title + "</h3></div> <div class='more'><a class='modal_link' id='modal-goods' href='#modal_more'>Подробнее</a></div></div>"
+    };
     // модалка информации
     var elemModal = function (index, btn) {
         var value = btn.data("filter");
@@ -106,12 +109,27 @@ function AjaxFilter() {
 
                     for (var i = 0; i < src.length; i++) {
                         if (i == index) {
-                            console.log(i)
                             $("#modal_more .modal-img").attr('src', src[i].img);
-                            $("#modal_more .modal-text").text(src[i].text);
+                            $("#modal_more .modal-text1").text(src[i].text1);
+                            $("#modal_more .modal-text2").text(src[i].text2);
                         }
                     }
                 }
+            }
+            if (value == undefined) {
+
+
+                var src = url.steel;
+                for (var i = 0; i < src.length; i++) {
+                    if (i == index) {
+
+                        $("#modal_more .modal-img").attr('src', src[i].img);
+                        $("#modal_more .modal-text1").text(src[i].text1);
+                        $("#modal_more .modal-text2").text(src[i].text2);
+                    }
+                }
+
+
             }
         })
     };
@@ -139,14 +157,28 @@ function AjaxFilter() {
                     if (key == value) {
                         var src = data.goods[key];
                         for (var j = 0; j < src.length; j++) {
-                            $("#mix_catalog .items_mix").append(elemTpl(src[j].img));
+
+                            $("#mix_catalog .items_mix").append(elemTpl(src[j].img, src[j].title));
+                            if (key == 'steel') {
+
+                            }
                         }
                     }
+                }
+
+
+            }
+            for (var key in url) {
+                if (key == "steel") {
+                    url[key].map(function (el) {
+                        $("#mix_catalog .statisc-items").append(staticElem(el.img, el.title));
+                    })
                 }
             }
         }).complete(function () {
             TweenMax.from(".goods-item", 0.7, {y: -30, autoAlpha: 0});
             var i = 0;
+            var j = 0;
             $('.goods-item .modal_link').each(function () {
                 $(this).attr("num", i);
                 i++;
@@ -154,6 +186,15 @@ function AjaxFilter() {
             $('.goods-item .modal_link').click(function () {
                 var num = $(this).attr("num");
                 elemModal(num, btn);
+            });
+            $('.statisc-items .modal_link').each(function () {
+                $(this).attr("num", j);
+                j++;
+            });
+            $('.statisc-items .modal_link').click(function () {
+                var num = $(this).attr("num");
+
+                elemModal(num, $(this));
             })
         })
     };
@@ -175,7 +216,7 @@ function AjaxFilter() {
                 if (key == value) {
                     var src = data.goods[key];
                     for (var i = 0; i < src.length; i++) {
-                        $("#mix_catalog .items_mix").append(elemTpl(src[i].img));
+                        $("#mix_catalog .items_mix").append(elemTpl(src[i].img, src[i].title));
                     }
                 }
             }
@@ -190,7 +231,7 @@ function AjaxFilter() {
             });
             $('.goods-item .modal_link').click(function () {
                 var num = $(this).attr("num");
-                elemModal(num, btn);
+                elemModal(num, $(this));
             })
         })
     }
@@ -324,6 +365,7 @@ function Animation() {
             .staggerFrom('#menu6 .map', 0.7, {y: 10, opacity: 0, ease: Power4.easeOut}, 0.2, 'lbl-14');
     };
     this.play = function () {
+
         if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 900) {
             tl1.play();
         }
@@ -336,7 +378,7 @@ function Animation() {
             tl3.play();
         }
 
-        if ($(window).scrollTop() >= 2200 && $(window).scrollTop() <= 2800) {
+        if ($(window).scrollTop() >= 1800 && $(window).scrollTop() <= 2800) {
             tl4.play();
         }
         if ($(window).scrollTop() >= 3100 && $(window).scrollTop() <= 4100) {
@@ -345,28 +387,28 @@ function Animation() {
         if ($(window).scrollTop() >= 4000 && $(window).scrollTop() <= 5100) {
             tl6.play();
         }
-        if ($(window).scrollTop() >= 5400 && $(window).scrollTop() <= 6300) {
+        if ($(window).scrollTop() >= 6000 && $(window).scrollTop() <= 6800) {
             tl7.play();
         }
-        if ($(window).scrollTop() >= 6400 && $(window).scrollTop() <= 7200) {
+        if ($(window).scrollTop() >= 6500 && $(window).scrollTop() <= 7500) {
             tl8.play();
         }
-        if ($(window).scrollTop() >= 7000 && $(window).scrollTop() <= 7800) {
+        if ($(window).scrollTop() >= 7200 && $(window).scrollTop() <= 8100) {
             tl9.play();
         }
-        if ($(window).scrollTop() >= 7700 && $(window).scrollTop() <= 8500) {
+        if ($(window).scrollTop() >= 7500 && $(window).scrollTop() <= 8300) {
             tl10.play();
         }
-        if ($(window).scrollTop() >= 8500 && $(window).scrollTop() <= 9400) {
+        if ($(window).scrollTop() >= 8500 && $(window).scrollTop() <= 9100) {
             tl11.play();
         }
-        if ($(window).scrollTop() >= 9400 && $(window).scrollTop() <= 10200) {
+        if ($(window).scrollTop() >= 9400 && $(window).scrollTop() <= 10700) {
             tl12.play();
         }
-        if ($(window).scrollTop() >= 10200 && $(window).scrollTop() <= 10900) {
+        if ($(window).scrollTop() >= 10100 && $(window).scrollTop() <= 10800) {
             tl13.play();
         }
-        if ($(window).scrollTop() >= 10900) {
+        if ($(window).scrollTop() >= 11000) {
             tl14.play();
         }
     };

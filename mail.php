@@ -45,8 +45,8 @@ if ($_POST) {
 
 
     $mailer = new PHPMailer();
-    $subject = "Заявка с сайта Название сайта";
-    $to = 'mini_van@ukr.net'; //ставьте свою почту для тестов 
+    $subject = "Заявка с сайта Стропы";
+    $to = 'zakaz@tk-e.com'; //ставьте свою почту для тестов 
  //   $mailer->IsSMTP();
     $mailer->Host = 'smtp.yandex.ru';
     $mailer->Port = 465;
